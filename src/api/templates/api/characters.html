@@ -7,12 +7,12 @@
 <body>
     <h2>Star Wars characters</h2>
     <table>
-        {% for hero in characters %}
         <tr>
-            {% for trait in hero %}
-                <td>{{ trait }}</td>
-            {% endfor %}
+        {% for header in headers %}
+            <th>{{ header }}</th>
+        {% endfor %}
         </tr>
+        {% for hero in characters %}
         <tr>
             {% for value in hero.values %}
                 <td>{{ value }}</td>
