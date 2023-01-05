@@ -6,14 +6,15 @@
       <div class="container-fluid">
         <div class="d-flex p-2 align-items-center mt-2">
           <h2 class="d-block me-2">Collections</h2>
-          <button type="button" class="btn btn-primary">Fetch</button>
         </div>
         <ul class="list-group">
-          <li class="list-group-item">
-            <a href="./collection.html">
-              Feb. 19, 2020, 9:32 a.m.
-            </a>
+          {% for item in collections %}
+            <li class="list-group-item">
+              <a href="/api/collection/{{ item.name }}/">
+                {{ item.name }}
+              </a>
           </li>
+          {% endfor %}
         </ul>
       </div>
     </main>
