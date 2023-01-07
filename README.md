@@ -4,7 +4,8 @@ Star Wars project uses SWAPI api to fetch data about Star Wars characters. The p
 /api/start/ Main page
 /api/characters/ Page shown after characters' fetch
 /api/collections/ Shows the list of all the collections fetched by the user
-/api/collections/<name>/ Shows a specific collection
+/api/collections/<name>/ Shows first 6 rows of a specific collection
+/api/collections/<name>/show-more Shows all the rows of a specific collection
 
 ## In order to setup the project locally, run the following commands in the project's folder:
 

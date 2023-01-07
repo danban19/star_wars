@@ -26,10 +26,19 @@ def collections_view(request):
 
 
 def single_collection_view(request, name: str):
-    """Display the collection chosen by the user"""
+    """Display first 6 rows of th collection chosen by the user"""
+
+    table = retrieve_table_to_json(name)
+    headers = [item for item in next(iter(table))]
+    characters = table[1:6]
+    return render(request, 'api/collection.html', {'characters': characters, 'headers': headers, 'name':name})
+
+
+def show_more_view(request, name: str):
+    """Display all the rows of th collection chosen by the user"""
 
     table = retrieve_table_to_json(name)
     headers = [item for item in next(iter(table))]
     characters = table[1:]
-    return render(request, 'api/collection.html', {'characters': characters, 'headers': headers, 'name':name})
+    return render(request, 'api/show-more.html', {'characters': characters, 'headers': headers, 'name': name})
 

@@ -27,7 +27,12 @@
               </tbody>
             </table>
         </div>
-        <button type="button" class="btn btn-primary">Load more</button>
+        {% block show-more %}
+        <a href="show-more/">
+          <button type="button" class="btn btn-primary">Show more</button>
+        </a>
+        {% endblock %}
       </div>
     </main>
 {% endblock %}
+
