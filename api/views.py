@@ -5,6 +5,8 @@ from api.helpers import update_homeworld, export_to_csv, retrieve_table_to_json
 
 
 def start_view(request):
+    """Display main page"""
+
     return render(request, 'api/start.html', {})
 
 
